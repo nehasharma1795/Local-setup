@@ -10,7 +10,7 @@ env:
 
 jobs:
   build-and-push:
-    runs-on: RHEL-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Code
