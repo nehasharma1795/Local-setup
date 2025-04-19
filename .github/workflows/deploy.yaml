@@ -5,8 +5,8 @@ on:
     branches: [main]
 
 env:
-  BACKEND_IMAGE: nehasharma1795/todo-backend
-  FRONTEND_IMAGE: nehasharma1795/todo-frontend
+  BACKEND_IMAGE: nehas91156/todo-backend
+  FRONTEND_IMAGE: nehas91156/todo-frontend
 
 jobs:
   build-and-push:

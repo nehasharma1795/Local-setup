@@ -1,20 +1,19 @@
-version: "3.8"
+version: '3.8'
 
 services:
   backend:
-    build: ./backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: nehas91156/todo-backend:latest
     ports:
       - "8000:8000"
-    environment:
-      - NODE_ENV=production
-    depends_on: []  # Backend does NOT depend on frontend
-
+    
   frontend:
-    build: ./frontend/todo
+    build:
+      context: ./frontend/todo
+      dockerfile: Dockerfile
+    image: nehas91156/todo-frontend:latest
     ports:
       - "3000:3000"
-    environment:
-      - NODE_ENV=production
-    depends_on:
-      - backend  # Frontend starts AFTER backend
 
